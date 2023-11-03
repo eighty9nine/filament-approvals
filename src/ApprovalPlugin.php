@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace EightyNine\Approval;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class SkeletonPlugin implements Plugin
+class ApprovalPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'filament-approvals';
     }
 
     public function register(Panel $panel): void
