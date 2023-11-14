@@ -129,9 +129,20 @@ class ViewLeaveRequest extends ViewRecord
 
 ```
 
+6. Add the ApprovalStatusColumn to your table to see the status of the approval flow
+
+```php
+    return $table
+        ->columns([
+            TextColumn::make("name"),
+            \EightyNine\Approvals\Tables\Columns\ApprovalStatusColumn::make("approvalStatus.status"),
+        ])
+    ...
+```
+
 Just like that, you are good to go, make some moneyyyyy🤑
 
-To add more approval flows(models), repeat the steps 3-5
+To add more approval flows(models), repeat the steps 3-6
 
 ## Changelog
 
