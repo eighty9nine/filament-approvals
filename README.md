@@ -69,7 +69,14 @@ class LeaveRequest extends ApprovableModel
 
 ```
 
-4. In your resource, add the approvable actions:
+4. Create approval flows
+- In your dashboard, a "Approval flows menu will have appeared". Click it and start creating the approval flows. The name is the name of the model, that you are using in your flow.
+
+- After you create your first approval create the steps. The steps will require that you have already create roles in your admin panel using the spatie/laravel-permission package.
+
+- You can move to the next step
+
+5. In your resource, add the approvable actions:
 
 ```php
 $table
@@ -85,7 +92,7 @@ $table
 
 ```
 
-5. In your view page, you can include the approval actions using the trait HasApprovalHeaderActions, and define the method getOnCompletionAction() that will return the action(s) to be shown once complete. If this method is not implemented and you use the trait, an error will be thrown.
+6. In your view page, you can include the approval actions using the trait HasApprovalHeaderActions, and define the method getOnCompletionAction() that will return the action(s) to be shown once complete. If this method is not implemented and you use the trait, an error will be thrown.
 
 ```php
 <?php
@@ -123,6 +130,8 @@ class ViewLeaveRequest extends ViewRecord
 ```
 
 Just like that, you are good to go, make some moneyyyyy🤑
+
+To add more approval flows(models), repeat the steps 3-6
 
 ## Changelog
 
