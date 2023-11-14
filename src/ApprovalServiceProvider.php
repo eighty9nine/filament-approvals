@@ -1,6 +1,6 @@
 <?php
 
-namespace EightyNine\Approval;
+namespace EightyNine\Approvals;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
@@ -13,8 +13,8 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use EightyNine\Approval\Commands\ApprovalCommand;
-use EightyNine\Approval\Testing\TestsApproval;
+use EightyNine\Approvals\Commands\ApprovalCommand;
+use EightyNine\Approvals\Testing\TestsApproval;
 
 class ApprovalServiceProvider extends PackageServiceProvider
 {
@@ -37,7 +37,8 @@ class ApprovalServiceProvider extends PackageServiceProvider
                     ->publishMigrations()
                     ->askToRunMigrations()
                     ->askToStarRepoOnGitHub('eightynine/filament-approvals');
-            });
+            })
+            ->hasViews(static::$viewNamespace);
 
         $configFileName = $package->shortName();
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace EightyNine\Approval\Testing;
+namespace EightyNine\Approvals\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
 

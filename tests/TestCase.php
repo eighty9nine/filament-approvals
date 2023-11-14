@@ -1,6 +1,6 @@
 <?php
 
-namespace EightyNine\Approval\Tests;
+namespace EightyNine\Approvals\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;

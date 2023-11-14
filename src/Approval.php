@@ -1,6 +1,6 @@
 <?php
 
-namespace EightyNine\Approval;
+namespace EightyNine\Approvals;
 
 class Approval
 {

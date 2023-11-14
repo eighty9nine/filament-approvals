@@ -1,6 +1,6 @@
 <?php
 
-namespace EightyNine\Approval\Facades;
+namespace EightyNine\Approvals\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

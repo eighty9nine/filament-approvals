@@ -1,6 +1,6 @@
 <?php
 
-namespace EightyNine\Approval\Database\Factories;
+namespace EightyNine\Approvals\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

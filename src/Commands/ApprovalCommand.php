@@ -1,6 +1,6 @@
 <?php
 
-namespace EightyNine\Approval\Commands;
+namespace EightyNine\Approvals\Commands;
 
 use Illuminate\Console\Command;
 
