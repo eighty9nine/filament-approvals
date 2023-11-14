@@ -3,6 +3,7 @@
 namespace EightyNine\Approvals\Forms\Actions;
 
 use Closure;
+use EightyNine\Approvals\Models\ApprovableModel;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Model;
@@ -50,7 +51,8 @@ class DiscardAction extends Action
      */
     private function discardModel(): Closure
     {
-        return function (array $data, Model $record): bool {
+        return function (array $data, ApprovableModel $record): bool {
+            $record->discard(null, Auth::user());
             Notification::make()
                 ->title('Discarded successfully')
                 ->success()
