@@ -52,7 +52,6 @@ php artisan migrate
 3. Make your model extend the ApprovableModel
 
 ```php
-<?php
 
 namespace App\Models;
 
@@ -74,9 +73,11 @@ class LeaveRequest extends ApprovableModel
 
 - After you create your first approval create the steps. The steps will require that you have already create roles in your admin panel using the spatie/laravel-permission package.
 
-- You can move to the next step
+- You can move to the next step 😉
 
-5. In your resource, add the approvable actions:
+5. Add the approvable actions:
+
+- In your resource table, add the approvable actions
 
 ```php
 $table
@@ -92,10 +93,9 @@ $table
 
 ```
 
-6. In your view page, you can include the approval actions using the trait HasApprovalHeaderActions, and define the method getOnCompletionAction() that will return the action(s) to be shown once complete. If this method is not implemented and you use the trait, an error will be thrown.
+- In your view page or edit page, you can include the approval actions using the trait HasApprovalHeaderActions, and define the method getOnCompletionAction() that will return the action(s) to be shown once complete. If this method is not implemented and you use the trait, an error will be thrown.
 
 ```php
-<?php
 
 namespace App\Filament\Resources\LeaveRequestResource\Pages;
 
@@ -131,7 +131,7 @@ class ViewLeaveRequest extends ViewRecord
 
 Just like that, you are good to go, make some moneyyyyy🤑
 
-To add more approval flows(models), repeat the steps 3-6
+To add more approval flows(models), repeat the steps 3-5
 
 ## Changelog
 
