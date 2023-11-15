@@ -26,7 +26,7 @@ class ApprovalFlowResource extends Resource
 
     protected static ?string $pluralModelLabel = 'Approval flows';
 
-    protected static ?string $navigationIcon = 'heroicon-o-check-circle';
+    // protected static ?string $navigationIcon = 'heroicon-o-check-circle';
 
     protected static ?string $navigationGroup = "Configuration";
 
