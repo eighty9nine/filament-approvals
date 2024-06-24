@@ -31,6 +31,11 @@ class ApprovalFlowResource extends Resource
 
     protected static ?string $pluralModelLabel = 'Approval flows';
 
+    public static function canViewAny(): bool
+    {
+        return Auth::user()->can("view_any_approval::flow");
+    }
+
     public static function getNavigationIcon(): ?string
     {
         return  config('approvals.navigation.icon', 'heroicon-o-clipboard-document-check');
